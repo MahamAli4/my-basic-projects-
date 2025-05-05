@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <div class="inputBox">
+            <input type="text" class="passBox" disabled id="password">
+        </div>
+
+        <input type="range" id="length" min="1" max="30" value="8" />
+        <div class="row">
+            <p>Password Length</p>
+            <span id="lengthValue">4</span>
+        </div>
+
+        <!-- Lowercase -->
+        <div class="row">
+            <label>Include LowerCase Letters</label>
+            <div class="checkbox-wrapper-12">
+                <div class="cbx">
+                    <input type="checkbox" id="lowercase" />
+                    <label for="lowercase"></label>
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Uppercase -->
+        <div class="row">
+            <label>Include UpperCase Letters</label>
+            <div class="checkbox-wrapper-12">
+                <div class="cbx">
+                    <input type="checkbox" id="upercase" />
+                    <label for="upercase"></label>
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Numbers -->
+        <div class="row">
+            <label>Include Numbers</label>
+            <div class="checkbox-wrapper-12">
+                <div class="cbx">
+                    <input type="checkbox" id="number" />
+                    <label for="number"></label>
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Characters -->
+        <div class="row">
+            <label>Include Special Characters</label>
+            <div class="checkbox-wrapper-12">
+                <div class="cbx">
+                    <input type="checkbox" id="special" />
+                    <label for="special"></label>
+                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <button id="generate">Generate</button>
+
+        <div class="container2">
+            <div class="icon"><a href="https://www.instagram.com/mahamalifa/"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="icon"><a href="https://www.facebook.com/profile.php?id=100085718102955"><i class="fa-brands fa-facebook-f"></i></a></div>
+            <div class="icon"><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="icon"><a href="https://www.linkedin.com/in/maham-naeem-3675b8345/"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+    </div>
+
+
+     
+    
+
+    <script src="app.js"></script>
+</body>
+
+</html>
