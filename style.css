@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background: url(./images/digital-art-dark-cosmic-night-sky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no repeat;
+  }
+  
+  .container-section {
+    width: 50%;
+    height: 80%;
+    border: 0.3rem solid #1a1a1a;
+    border-radius: 2rem;
+    background-color: #0d0d0d;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #1a1a1a;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .clock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-size: 2.5rem;
+    z-index: 0;
+  }
+  .clock::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      #0000ff 120deg 150deg,
+      transparent 150deg 180deg,
+      #fc00ff 300deg 330deg,
+      transparent 330deg 360deg
+    );
+    animation: rotateClockwise 8s linear infinite;
+    z-index: 0;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  
+  .clock::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      #b91fdc 120deg 150deg,
+      transparent 150deg 180deg,
+      #2370f5 80deg 120deg,
+      transparent 120deg 160deg,
+      #29ffae 240deg 280deg,
+    );
+    animation: rotateCounter 10s linear infinite;
+    z-index: 0;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  
+  /* Clock content */
+  .front-clock {
+    position: relative;
+    z-index: 2;
+    background-color: #0d0d0d;
+    width: 95%;
+    height: 95%;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 0.8rem;
+  }
+  
+  @keyframes rotateClockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounter {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+
+    
