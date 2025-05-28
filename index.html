@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blub</title>
+  <style>
+    body {
+      background-color: black;
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: crimson;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Click on the Bulb to Turn On and Off</h1>
+    <img src="./image/off.jpg" alt="bulb" id="blub_image" />
+  </div>
+
+  <script>
+    let image = document.getElementById('blub_image');
+
+    image.addEventListener("click", () => {
+      if (image.src.includes('on')) {
+        image.src = "./image/off.jpg";
+      } else {
+        image.src = "./image/on.jpg";
+      }
+    });
+
+    // includes() method ka use is liye kiya gaya hai taake
+    //  hum check kar saken ke image ka src URL mein "on" word hai ya nahi.
+  </script>
+</body>
+</html>
