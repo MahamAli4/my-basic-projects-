@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                QuizMaster
+            </a>
+            <ul class="nav-links">
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="dark-toggle" title="Toggle Light/Dark Mode">🌗</div>
+
+    <div class="main-content">
+        <div id="container">
+            <div id="start-screen">
+                <h1>Welcome to Quiz</h1>
+                <label for="username">Enter Your Name:</label>
+                <input type="text" id="username" placeholder="Your name here" />
+                <label for="topic-select">Select Topic:</label>
+                <select id="topic-select">
+                    <option value="" disabled selected>Choose a topic</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="generalKnowlege">General Knowledge </option>
+                    <option value="iQ">IQ Based Questions</option>
+                    <option value="math">Math</option>
+                    <option value="englishGrammar">English Grammar</option>
+                </select>
+                <button id="start-btn">Start Quiz</button>
+            </div>
+
+            <div id="quiz-screen" style="display:none;">
+                <div id="timer">Time Left: <span id="time">15</span>s</div>
+                <h2 id="question"></h2>
+                <div id="options"></div>
+                <button id="next-btn">Next</button>
+            </div>
+
+            <div id="result-screen" style="display:none;">
+                <div id="result"></div>
+                <img id="fireworks" src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Fireworks" />
+                <img id="sad-animation" src="https://media.giphy.com/media/l3vRnoX1R8uMnE6UM/giphy.gif" alt="Sad" />
+                <button id="restart-btn">Restart Quiz</button>
+            </div>
+
+            <div id="leaderboard" style="display:none;">
+                <h2>Leaderboard - Top 5 Scores</h2>
+                <ol id="leaderboard-list"></ol>
+            </div>
+        </div>
+    </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 QuizMaster App. All rights reserved.</p>
+  </footer>
+
+  <audio id="cheer-sound" src="./audio/game-win-36082.mp3" preload="auto"></audio>
+  <audio id="lose-sound" src="./audio/losing-horn-313723.mp3" preload="auto"></audio>
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
