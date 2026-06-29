@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="left">
+            <div class="list" draggable="true">List Items 01</div>
+            <div class="list" draggable="true">List Items 02</div>
+            <div class="list" draggable="true">List Items 03</div>
+            <div class="list" draggable="true">List Items 04</div>
+        </div>
+        <div id="right"></div>
+    </div>
+
+
+
+    <script>
+      let lists = document.querySelectorAll('.list');
+        let rightBox = document.getElementById('right');
+        let leftBox = document.getElementById('left');
+        let selected = null;
+
+        lists.forEach(item => {
+            // Har list item pe dragstart event lagaya gaya hai.
+            item.addEventListener("dragstart", function (e) {
+                selected = e.target;
+
+                // Jab user kisi item ko drag karega, wo item selected variable mein store ho jayega
+                // e.target ka matlab hai jis item ko drag kiya gaya, usi ko pakdo..
+            });
+        });
+
+        [rightBox, leftBox].forEach(box => {
+            box.addEventListener("dragover", function (e) {
+                e.preventDefault();
+            });
+
+            box.addEventListener("drop", function (e) {
+                if (selected) {
+                    box.appendChild(selected);
+                    selected = null;
+                }
+            });
+        });
+
+
+
+
+
+
+
+        /*Yahan dono boxes (left aur right) ke liye loop chalaya gaya hai:
+
+➤ dragover Event:
+By default, kisi bhi element pe item drop nahi ho sakta.
+
+e.preventDefault() likhne se browser ko bataya jaata hai ke "haan, yahan item drop kiya ja sakta hai".
+
+➤ drop Event:
+Jab item ko box ke upar drop kiya jaata hai:
+
+box.appendChild(selected) — selected (dragged) item us box ke andar chala jaata hai.
+
+selected = null — selected item ko clear kar diya jaata hai memory se (next drag ke liye ready).
+*/
+
+
+    </script>
+</body>
+
+</html>
