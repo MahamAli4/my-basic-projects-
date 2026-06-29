@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Array</title>
+</head>
+<body>
+    <script>
+        let arr = [1,3,456,[64,55],64,4,5]
+        let [valu1,value2,value3,value4,value5,value6,value7,value8] =arr
+        console.log(valu1,value2,value3,value4,value5,value6,value7,value8);
+        
+
+        let user =["karachi","maham",35]
+        let [city,name,age]=user
+        console.log(city);
+        console.log(name);
+        console.log(age);
+
+        let userFirst =["karachi","maham", ,35]
+         let [c,n,l,a]=userFirst
+         console.log(c);
+         console.log(n);
+         console.log(l);
+         console.log(a);
+         
+    </script>
+</body>
+</html>

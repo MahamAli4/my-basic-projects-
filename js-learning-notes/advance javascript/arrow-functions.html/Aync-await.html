@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async & Await </title>
+</head>
+<body>
+    <script>
+        async function test() {
+            return "hello"
+        }
+        console.log(test());//promise
+
+        async function test2() {
+            return "hello"
+        }
+       test2().then((result)=>{
+          console.log(result);
+          
+       })
+        let test =async function() {
+            return "hello"
+        }
+       test2().then((result)=>{
+          console.log(result);
+          
+       })
+        let test =async ()=> "hello"
+       test2().then((result)=>{
+          console.log(result);  
+       })
+        
+        // Promise async function return karta hai 
+        // kisi bhi function se phele ham asyn laga dain to wo haman 
+        // promise function return karta hai. 
+
+        // Await Method 
+        async function test() {
+         console.log("2,message");//2nd print
+         await console.log("3,message");// wait karna   //3rd print
+         console.log("4,message");  //5th line print
+        }
+         console.log("1,message"); //1 print 
+         test()
+         console.log("5,message");//4th print
+
+
+        //  server se data gate karne k lie async &await function ka use hota hai 
+    </script>
+</body>
+</html>

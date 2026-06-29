@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Optional Chaining</title>
+</head>
+<body>
+    <script>
+        let student = { name: "Ali" };
+        console.log(student?.marks?.math);
+
+        let user = { profile: { name: "Sara" } };
+        console.log(user.profile?.age);
+        
+        let data = { product: { details: { price: 500 } } };
+        console.log(data.product.details?.name);
+        
+        let users = ["Maham", "Ali", "Sara"];
+        console.log(users?.[3]);
+        
+        
+
+    </script>
+</body>
+</html>

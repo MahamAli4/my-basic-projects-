@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function javascript</title>
+</head>
+<body>
+    <script>
+        // function ka small syntax hai 
+        // simpale funtion 
+        // function declatration 
+        function myfunc(){
+            console.log("hello");
+            
+        }
+        myfunc();
+        // Function Expression 
+        let myfunction = function(){
+            console.log("hello");  
+        }
+        myfunction();
+        let welcome= function (name){
+            return `hello & Welcome ${name}`
+        }
+        console.log(welcome("Maham Ali"));
+        
+
+        // Arrow function 
+        let ArrowFunc= ()=> console.log("hello");
+        ArrowFunc()
+        let user = (name, age)=>{
+            return `welcome ${name} - ${age}`
+        }
+        console.log(user("maham",25));
+        
+
+        let newUser = name => `hello ${name}`
+        console.log(newUser("Maham"));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Exercises</title>
+</head>
+
+<body>
+
+<div class="container" style="background-color: red; color: white;padding: 40px;">
+    <input type="text" id="textInput">
+    <button id="btn"> Add</button>
+    <p id="para"></p>
+</div>
+
+    <script>
+// 👉 Exercise 1:
+// Ek array let numbers = [1, 2, 3, 4, 5] bana kar:
+// End me 6 add karo.
+// First element hatao.
+// Array ke elements ka sum nikalo.
+
+let numbers = [1, 2, 3, 4, 5]
+numbers.push(6)
+numbers.shift()
+const result = numbers.reduce(function(sum,num){
+    return sum + num
+})
+// console.log(result);
+
+// 👉 Exercise 2:
+// Ek array let fruits = ['apple', 'banana', 'mango', 'orange'] bana kar:
+// Banana ko hatao.
+// Mango ke baad 'grape' add karo.
+// Array ko reverse karo.
+
+let fruits = ['apple', 'banana', 'mango', 'orange']
+fruits.splice(1,1)
+fruits.splice(2,0,"grape")
+fruits.reverse()
+// console.log(fruits);
+
+// 👉 Exercise 4: 
+// Ek nested array let arr = [1, [2, 3], [4, [5]]] ko flat karo ek level tak.
+
+let arr = [1, [2, 3], [4, [5]]] 
+// console.log(arr.flat(1));
+// console.log(arr.flat(2));
+
+// ✅ Mini Project 1: Simple To-Do List (Using push(), splice(), forEach())
+// User se task input lo.
+// Array me task add karo.
+// User ko option do task delete karne ka.
+
+let input = document.getElementById('textInput')
+let btn = document.getElementById('btn')
+let array = []
+btn.addEventListener("click",function(){
+    array.push(input.value)
+    document.getElementById('para').innerHTML =array
+    input.value = ""
+})
+
+
+
+
+    </script>
+</body>
+
+</html>

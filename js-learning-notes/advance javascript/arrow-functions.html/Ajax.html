@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+  <p id="demo">Here we load data.</p>
+  <button onclick="loadData()">Click</button>
+
+    <script>
+        function loadData(){
+            var xhttp =new XMLHttpRequest();
+             xhttp.onreadystatechange = function (){
+                if (this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    document.getElementById('demo').innerHTML = this.responseText
+                    
+                } else if(this.readyState == 4 && this.ststus == 404){
+                    document.getElementById('demo').innerHTML = "Request not Found"
+                }
+
+             }
+
+
+            xhttp.open("GET", "./readme.txt",true);
+            xhttp.send();
+        }
+    
+        // What is Ajax ?
+        //Ajax = A= Asynchronous , J= Javascript , A= & and , X= XMl  
+        // Ajax is a technique for creating fast and dynamic web pages
+        // ajax k zariye ham kisi bhi web page ko dynamic or fast loaded bana sakte hai.
+
+
+        // javascript ajax syntax 
+        // let xhttp = new XMLHttpRequest();
+
+        // ab  is ko use karne k lie bohot sare method use hote hai 
+        // server se jo bhi data ata hai aus ko lene k lie sub se phele ham use karte hai.
+
+        // xhttp.open("GET", "filename.text", true)
+       // xhttp.send();//server ko request sent karne k lie use hota he ye method
+        // ye 2no method aik sath use hota hai 
+
+        // xhttp.open("GET", "filename.text", true)
+        //is me 3 perametter use hote hai first me "GET" aik method he is me is ko use is kie karte hain k server se jo 
+        // data ata hai wo hidden form me nai hota aus ko sub parh sakte hai.
+        // or isi me  aik "POST" method bhi use hota hai wo hidden form me hota hai jese login or singup karne k lie .
+        
+        // 2nd parameter  file name kooi bhi server se data araha hai aus ka file name lik dena .
+        // 3rd parameter  is me true ya false hi use hota hai
+        //true rakhne ka matlab ye hai asyns function active hai yani jab tak server se data load ho
+        //  raha hai tab tak age ka code chal jaye ruke nai or agar false  kar dain ge to jab tak data nai 
+        // aye ga code age nai chale ga.
+
+
+        // let xhttp = new XMLHttpRequest();
+        // xhttp.onreadystatechange = function(){
+        //     if (this.readyState == 4 && this.status == 200){
+        //         document.getElementById("demo").innerHTML =this.responseText;
+        //     }
+        // }
+        //xhttp.open("GET", "fileNmae.txt", true);
+        //xhttp.send();
+
+        // chalo is me to hamari apni file bani hu v hai isi tarhain ham fake joson data search kar k 
+        //file ki jaga aus data ka url laga dain ge to wo data pura ajaye ga.
+
+
+        // console k baraber me aik "Network" hai aus ko click karo aus k ander 
+        // "XHR" he is ka matlab he . X= XML,H=Http, R= request
+
+
+    </script>
+</body>
+</html>

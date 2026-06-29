@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array - find() function: 
+
+        // find()  method returns the value of the first 
+        // Element in an array that pass test.
+
+        // explain : find() function jo ye array me jo fisrt  value is ki condition k mutabiq true ho gi wo print kar de ga aus k bad jitni bhi true ya false values 
+        // ho aun ko check nai kare ga.
+
+          let age = [20,30, 12,20,1,6]
+        document.write(age +"<br><br>") //answer: 20,30,12,20,1,6
+
+        let b = age.find(checkAdult);
+         document.write(b +"<br><br>") //answer : 20 anser de dia jo first element tha baqi koi bhi value check nai kare 
+         // firt k true par ruk gaya.
+
+          function checkAdult(age){
+            return age >= 18;
+        }
+
+
+        // Array- findIndex() function : 
+        //findIndex() method returns the index of the first element in
+        //  an array that pass a test.
+
+        // explai: ye bhi find() function ki tarhaun kam karta hai lekin true value 
+        //deta hai oe findIndex() aus ka true value ka in dex number  ikal k deta ha.
+
+        let ages = [10,23,19,20]
+
+        let c = age.findIndex(aultAge);
+         console.log(b +"<br><br>");
+
+
+           function aultAge(age){
+            return age >= 18;
+        }
+
+         
+
+    </script>
+</body>
+</html>

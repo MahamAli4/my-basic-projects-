@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = [20,30, 12,20,1,6]
+        document.write(age +"<br><br>") //answer: 20,30,12,20,1,6
+
+        let b = age.filter(checkAdult); // peranthisis me function ka name 
+        // rakhe ge
+
+        document.write(b +"<br><br>")// abhi ye filter nai kare jab tak ham function bana k koi 
+        // condition nai apply karan ge
+
+        function checkAdult(age){
+            return age >= 18;
+        }
+
+        // explain : ab filter jo he apni condition k mutabiq kam kare ga . 
+        // or is tarhan ki koi hi condition bana sakte hain function me .or filter jo he real 
+        // array me koi changing nai karta hai bal k naya varia ble bana k deta filter kar k apni condition k mutabiq.
+
+
+
+
+
+    </script>
+</body>
+</html>

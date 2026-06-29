@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // break and continue ki statement 
+        // ye dono sirf lop me use hote hain. 
+        // continue: jo he jahan par condition true hoti he .loop ko age se continue kar deta hai.
+
+        for (let i = 1; i <= 10; i++) {
+            if (i == 3) {
+                document.write("hello : " + i + "<br>");
+                continue;
+            }
+            document.write("Number : " + i + "<br>")
+        }//ye simple loop chal raha he.
+        //ab is me kia he hello 3 k bad dobRA number 3 se start ho 
+        // raha hai .to jesi condition me continue statement lagaye 
+        // ge to wo number 4 se start hoga number 3 nai aye ga.
+
+
+        // or break statement is k aulat work karti hai. 
+        //jahan par c<br>ondition true ho gi wahi par loop ruk jaye ga.
+        document.write("<br><br>")
+        for (let i = 1; i <= 10; i++) {
+            if (i == 3) {
+                document.write(" hello : " + i + "<br>");
+                break;
+            }
+            document.write("Number : " + i + "<br>")
+        }
+    </script>
+</body>
+
+</html>

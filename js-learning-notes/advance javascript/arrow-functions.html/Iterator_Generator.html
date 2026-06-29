@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterator & Generator</title>
+</head>
+
+<body>
+    <BUTton id="registerBtn">Generate Id</BUTton>
+    <div id="userList"></div>
+
+    <script>
+        // 📚 JavaScript Iterator & Generator Practice Package
+
+
+// 👉 Exercise 1: Manual Iterator
+// Ek custom iterator banao jo array ke elements step by step return kare.
+// Array: ['apple', 'banana', 'grape']
+//next() method se har element print karo.
+
+// function createIterator(array){
+//     let index = 0;
+//     return { 
+//         next: function (){
+//             if(index < array.lenght){
+//                  return { value: array[index++], done: false };
+//             }else{
+//                 return{done:true}
+//             }
+//         }
+//     }
+// }
+// let iterator1 = createIterator(["apple","banana","grape"])
+// console.log(iterator1.next());
+// console.log(iterator1.next());
+// console.log(iterator1.next());
+// console.log(iterator1.next());
+
+// function createIteratorr(array) {
+//     let index = 0;
+//     return {
+//         next: function() {
+//             if (index < array.length) {
+//                 return { value: array[index++], done: false };
+//             } else {
+//                 return { done: true };
+//             }
+//         }
+//     }
+// }
+
+// let iterator = createIteratorr(['apple', 'banana', 'grapes']);
+
+// console.log(iterator.next()); // { value: 'a', done: false }
+// console.log(iterator.next()); // { value: 'b', done: false }
+// console.log(iterator.next()); // { value: 'c', done: false }
+// console.log(iterator.next()); // { done: true }
+
+
+// 👉 Exercise 2: Simple Generator
+// Ek generator function banao jo 1, 2, 3 sequence return kare.
+// Har next() call pe ek number print karo.
+
+// function* createGenerator(){
+//     yield 1,
+//     yield 2,
+//     yield 3
+// }
+// let generator = createGenerator()
+// console.log(generator.next());//{value: 1, done: false}
+// console.log(generator.next());//{value: 2, done: false}
+// console.log(generator.next());//{value: 3, done: false}
+// console.log(generator.next());//{value: undefined, done: true}
+
+// 👉 Exercise 3: Infinite ID Generator
+// Ek generator banao jo auto-increment IDs generate kare.
+// IDs: 1, 2, 3, 4 ... infinite tak chale.
+
+// function* generateId(){
+//     let id = 1;
+//     while(true){
+//         yield id++
+//     }
+// }
+// let idGenerator = generateId()
+// console.log(idGenerator.next());
+// console.log(idGenerator.next());
+// console.log(idGenerator.next());
+// console.log(idGenerator.next());
+// console.log(idGenerator.next());
+// console.log(idGenerator.next());
+// console.log(idGenerator.next());
+
+// function newcreateIteratorr(array) {
+//     let index = 0;
+//     return {
+//         next: function() {
+//             if (index < array.length) {
+//                 return { value: array[index++], done: false };
+//             } else {
+//                 return { done: true };
+//             }
+//         }
+//     }
+// }
+
+// let iterator = newcreateIteratorr("HELLO");
+
+// console.log(iterator.next()); // { value: 'H', done: false }
+// console.log(iterator.next()); // { value: 'E', done: false }
+// console.log(iterator.next()); // { value: 'L', done: false }
+// console.log(iterator.next()); // { value: 'L', done: false }
+// console.log(iterator.next()); // { value: 'O', done: false }
+// console.log(iterator.next()); // { done: true }
+
+
+// Mini Project – Custom ID Generator
+// ✅ Project Idea:
+// Auto ID Generator for User Registration.
+// 📌 Features:
+// Every time user clicks "Register" button → New ID generated.
+// IDs will start from 1001, 1002, 1003...
+
+function* generatorUserId() {
+    let userid = 1001;
+    while(true){
+        yield userid++;
+    }
+}
+
+let newIdgenerator = generatorUserId()
+const btn = document.getElementById('registerBtn');
+const userlist = document.getElementById('userList');
+
+btn.addEventListener("click",()=>{
+    let newId = newIdgenerator.next().value
+    let element= document.createElement('div')
+    element.innerHTML = `New User Registered: ID ${newId}`
+    userlist.appendChild(element)
+})
+    </script>
+</body>
+
+</html>

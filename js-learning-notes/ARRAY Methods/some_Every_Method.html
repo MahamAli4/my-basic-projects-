@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    Array - Some()  Function : 
+        //check if any of the elements in an Array pass a test
+        // is ka matlab yahi he  k array me is some fuction ki condition ki koi bhi value match kar jati hai to
+        //  to true print kar deta he
+
+        var ages = [10, 20, 30, 18]
+        document.write(ages + "<br><br>")
+
+        var b = ages.some(checkAdult);
+        document.write(b + "<br><br>"); // answer is true
+
+        function checkAdult(age) {
+            return age > 18;
+        }
+
+        //    Array - every()  Function : 
+
+        //    is me ye he k jab tk sari value test ko pass nai karan gi ye true return nai kare ga .
+        //jab k some() me aik bhi vlue pass kar jati he to true return kar deta hai.
+
+
+        var newages = [10, 20, 30, 18]
+        document.write(newages + "<br><br>")
+
+        var c = newages.every(checkAdult);
+        document.write(c + "<br><br>"); // answer is true
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+
+    </script>
+</body>
+
+</html>

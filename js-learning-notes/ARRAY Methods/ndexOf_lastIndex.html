@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array- indexOf() function : 
+        // indexOf() ka method bhi value search kar k deta hai. 
+        // is me koi bhi value likh kar serch karan ge to ye aus ka Index number nikal k dede ga .
+        //lekin ye start se dekhna shuru kar ta he yani 0 index number se check karna shuru kar hai.
+        
+        //indexOf("searxh Item", start)
+        //is me bhi 2 parameter use hote hai firstme search item likhte hai 2nd me ye batate hai k kis index se check kar na hai.
+
+        let a = ["Saba","Samira","Sania","Sana","Saba"]
+
+        let b = a.indexOf("Saba")
+        document.write(b + "<br><br><br>")//answer is 0 index
+
+        let c = a.indexOf("Saba", 1)
+        document.write(c  + "<br><br><br>")
+
+        // Array- indexOf() function :
+        //ye bhi indexOf ki tarhan kam karta hai lekin ye last se index number nikal k deta ha.
+
+        let d = ["Saba","Samira","Sania","Sana","Saba"]
+
+        let e = d.lastIndexOf("Saba")
+        document.write(e  + "<br><br><br>")//answer is 4 index
+
+        let f = d.lastIndexOf("Saba",3)
+        document.write(f)//answer is 0 index number
+    </script>
+</body>
+</html>

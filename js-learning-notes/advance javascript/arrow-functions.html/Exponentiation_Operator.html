@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponentiation Operator</title>
+</head>
+
+<body>
+    <script>
+        //         ✅ Exponentiation Operator vs Math.pow()
+        // Method      	                 Syntax        Example
+        // Exponentiation Operator	     a ** b       	2 ** 3 = 8
+        // Math.pow()	            Math.pow(a, b)	  Math.pow(2, 3) = 8
+
+        console.log(2 ** 4); // 16
+        console.log(Math.pow(2, 4)); // 16
+
+        // Dono same hi kaam karte hain, bas ** modern aur short tariqa hai.
+        
+// ✅ Use kyu karte hain?
+// Jab kisi number ki power find karni ho.
+// Exponent (scientific calculation) ke liye.
+// Square, cube ya higher powers nikalne ke liye.
+
+// 🌟 Quick Example: Square and Cube Function 
+
+function squre(num){
+    return num**2;
+}
+function cube(num){
+    return num**3;
+}
+console.log(squre(5));//25
+console.log(cube(3));//27
+
+
+
+</script>
+</body>
+
+</html>

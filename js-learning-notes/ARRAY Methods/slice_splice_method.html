@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Array- slice() functions: 
+        // Array me se koi value nikal kar naya Array banana he to aus k lie slice() use karte 
+        // hain. ye Array ki copy bana k deta hai .
+        //is me 2 paramtter rakhte hain aik ["start","end"] matlab kaha 
+        // se start karna he or kaha par end kar na he or jahan tak copy karana he aus k age wala index lain ge
+
+        //yani 0 se 2 tak copy kar he to [0,3] lain ge 3 is li likhe ge k ham aus ko bol rahe hain km 0 se 3 tak copy karo 3 copy nai karna
+
+        var a = ["salam", "aslam", "shekar", "muslim", "rehman"]
+        document.write(a + "<br><br><br>")
+
+        let b = a.slice(1, 3)//aslam ,shekar
+        let c = a.slice(1)//aslam, "shekar", "muslim","rehman"
+        document.write(b + "<br><br><br>")
+        document.write(c + "<br><br><br>")
+
+        let d = a.slice(-2) //"muslim", "rehman"
+        let e = a.slice(-3) //"shekar", "muslim", "rehman"
+        document.write(d + "<br><br><br>");
+        document.write(e + "<br><br><br>");
+
+
+        // Array- splice() functions: 
+        //array k center kuch bh delet karane ya add krne k lie use hota hai .
+
+        let set = ["sultan", "Shahid", "aslam", "shekar", "muslim"]
+        document.write(set + "<br><br><br>")
+        let res = set.splice(2,0,"ali")//
+        document.write(res + "<br><br><br>")
+
+
+        let newArr = ["salam", "aslam", "shekar", "muslim"]
+        document.write(newArr + "<br><br><br>")
+        let del = newArr.splice(2,2,"ali",)//shekar,muslim
+        console.log(del );
+       
+        document.write("hello")
+
+
+    </script>
+</body>
+
+</html>

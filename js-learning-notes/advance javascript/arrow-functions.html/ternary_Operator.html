@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Ternary Operator</title>
+</head>
+<body>
+    <h1>Check Voting Eligibility</h1>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button id="checkBtn">Check</button>
+    <p id="result"></p>
+    
+    
+    
+    <script>
+
+        let btn = document.getElementById('checkBtn')
+        // let result = document.getElementById('result')
+        btn.addEventListener("click",()=>{
+           let age = document.getElementById('ageInput').value;    
+            let result = (age >= 18) ? "You are eligible to vote." : "You are not eligible to vote.";
+            document.getElementById('result').innerHTML = result;
+      })
+
+        // 👉 Exercise 1:
+        // Check if a number is positive or negative using ternary operator.
+        // Number: let num = -7;
+
+        let num = -7;
+        // document.write(-7 == true? "positive" :"Negative");
+
+    //     👉 Exercise 2:
+    //    Check if age is eligible for driving or not using ternary operator.
+    //    Age: let age = 16;
+
+        let age = 16
+        // document.write(age >= 18? "You can Drive" : "You can no drive");
+
+        // 👉 Exercise 3:
+        // Check if a number is even or odd using ternary operator.
+        // Number: let num = 13;
+
+        let number =13;
+        // console.log(number%2 == 0? "even":"odd");
+
+
+        // 👉 Exercise 4:
+        // Create a nested ternary that assigns grades:
+        // Marks >= 90 → "A"
+        // Marks >= 80 → "B"
+        // Otherwise → "C"
+        // Marks: let marks = 75;  
+        let marks = 75;
+        let grades = (marks >= 90)?"A":(marks >= 80)? "B" : "C"
+        console.log(grades);
+        
+         
+        
+        // ✅ Project Idea:
+        // User se age input lo.
+        // Ternary operator se check karo:
+        // Agar user 18 ya us se bara hai to "You are eligible to vote."
+        // Agar user 18 se chota hai to "You are not eligible to vote."
+        
+        // let user = +prompt("Please Enter your age");
+        // let vote = user >= 18 ? "You are eligible to vote." : "You are not eligible to vote."
+        // console.log(vote);  OPTIONAL CODE TOP PAR HE
+        
+    </script>
+</body>
+</html>

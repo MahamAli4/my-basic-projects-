@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map/ flatMap</title>
+</head>
+<body>
+    <script>
+        // Map method
+
+        let arr = [1,3,46,7,7]
+        let newArr= arr.map(function(num){
+            return num*num
+        })
+        console.log(newArr);
+
+        // Flat mwthod 
+        // Nested array ko falt kar deta hai . 
+        let arr1= [2,4,45,[45,6,7],5,7,8]
+        let neearr1 = arr1.flat(3)
+        console.log(neearr1);
+
+        //FlatMAp method
+        let arr2= [2,4,45,[45,6,7],5,7,8]
+        let neearr2 = arr2.flatMap(function(num){
+            return num +num;
+        })
+        console.log(neearr2);
+        
+        
+    </script>
+</body>
+</html>
