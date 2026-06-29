@@ -1,0 +1,250 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+} */
+.text-color{
+  color: #bba4f6 !important;
+}
+body {
+  background-color: #081b29 !important;
+}
+
+a {
+  text-decoration: none;
+  color: #d4cee4 !important;
+}
+
+.navbar {
+  background-color: #081b29 !important;
+  color: white !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar-nav .nav-link {
+  position: relative;
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #bba4f6;
+  transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #bba4f6 !important;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #bba4f6;
+  flex: 1;
+}
+
+.main {
+  color: #bba4f6;
+  margin-right: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 15px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #bba4f6;
+}
+
+.user-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info .name {
+  font-weight: bold;
+}
+
+.user-info .email {
+  font-size: 13px;
+  color: #aaa;
+}
+
+#logout-btn {
+  background: #bba4f6;
+  padding: 10px 20px;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  transition: 0.7s ease;
+}
+
+#logout-btn:hover {
+  background: linear-gradient(260deg, #081b29, #bba4f6, #081b29);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #bba4f6;
+}
+
+.form-wrapper {
+  background: transparent;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #bba4f6;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-wrapper input,
+.form-wrapper textarea {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #bba4f6;
+  color: #bba4f6;
+  padding: 12px;
+  font-size: 16px;
+  margin: 10px 0 20px;
+  resize: none;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #bba4f6;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.7s ease;
+}
+
+button:hover {
+  background: linear-gradient(260deg, #081b29, #bba4f6, #081b29);
+}
+
+.post {
+  margin-top: 20px;
+  background: linear-gradient(60deg, #081b29, #bba4f6, #081b29);
+  padding: 15px;
+  color: #fff;
+  border-radius: 8px;
+  position: relative;
+}
+.card {
+  overflow: visible !important;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#loader-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+#loader {
+	display: none;
+	width: 60px;
+	aspect-ratio: 2;
+	--_g: no-repeat radial-gradient(circle closest-side, #125b9a 90%, #0000);
+	background:
+		var(--_g) 0% 50%,
+		var(--_g) 50% 50%,
+		var(--_g) 100% 50%;
+	background-size: calc(100% / 3) 50%;
+	animation: l3 3s infinite linear;
+}
+
+@keyframes l3 {
+	20% {
+		background-position: 0% 0%, 50% 50%, 100% 50%;
+	}
+	40% {
+		background-position: 0% 100%, 50% 0%, 100% 50%;
+	}
+	60% {
+		background-position: 0% 50%, 50% 100%, 100% 0%;
+	}
+	80% {
+		background-position: 0% 50%, 50% 50%, 100% 100%;
+	}
+}
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .user-info {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #logout-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
