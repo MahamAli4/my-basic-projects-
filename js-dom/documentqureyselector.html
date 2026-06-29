@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <!-- Examples 4 -->
+    <!-- doccumen.qureySelector  -->
+
+
+    <!-- defination and expalin :
+              professionaly sub se ziyada yahi use kIA JAA HAI . 
+             qureySlector jo he 3no  koslect kar sakta he mat is k zariye kisi id ko bhi get kar sakte hain and kisi bhi tag ko get
+              kar sakte hain and kisi bhi class ko get kar sakte hain. 
+              
+   point :
+       aik time me kitne elements ko get kar sakta he.
+       JAB BHI HAM QUREYSLECTOR KO JAB BHI USECKARAN GE TO TO AT A TIME AIK HE element le k aye ga . matlab
+       agr bohot sare p k tag hon to wosub se phela jo p ka tag ho ga aus ko target kar k le aye ga . 
+        
+       
+       interview qutions : qureyse;ector aik hi ement ko proses karta hai at a time  aik hi a'
+       Element ko selct karta hai.-->
+
+       <h2 id="heading-section">welcome</h2>
+       <h1 class="heading2">javascript learning</h1>
+       <h1>Maham ali </h1>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse et, ab maiores voluptas aperiam        adipisci debitis
+           sequi eos quaerat nesciunt?</p>
+   
+       <script>
+           let qureyElemnt= document.querySelector('h1');
+           console.log(qureyElemnt);
+
+
+           let headingId = document.querySelector('#heading-section');
+           console.log(headingId);
+
+
+           let headingClass = document.querySelector('.heading2');
+           console.log(headingClass);
+           
+       </script>   
+       
+       
+
+      <!-- Examples 5-->
+    <!-- doccumen.qureySelectorAll  -->     
+   <!-- ye sare element ko aik sath select karn k lie use hota hai .
+    
+   
+   ab ye soche ge k aik sath element ko seect karne k lie document.getElementByClassName or document.getElementBytagName bhi use karbsakte the 
+   to wo use kar lete hain ..
+   
+   to is ka anwer ye hai k ByClaasName and ByTAgaName forEach ka function/method use nai hota is qureySlector me use hota hai
+   -->
+
+   <h3>Welcome</h3>
+   <h3>Hello</h3>
+   <h3>Would</h3>
+   <h3>How are you would</h3>
+
+   <script>
+    let allheading = document.querySelectorAll('h3');
+    allheading.forEach((items,index)=>{
+         console.log(items.innerHTML);
+        //  forEach k funtion me ham ne parenthisis me 2 perametter rakhe hain 
+        // firts ka name kuch bhi rakh sakte hain 2nd me index is lie dia k jo bhi selector jis index par araha he wo line baline call ho jaye .
+        // phir jo first ka name rakaha tha aus ka niche console me call kar dia to 3no 4 no elements print ho jaye ge phir .innerHTML lagaya tak aun Element k ander ka content print ho jaye .
+
+         
+    })
+    console.log('allheading');
+    
+   </script>
+
+   
+
+   
+</body>
+</html>

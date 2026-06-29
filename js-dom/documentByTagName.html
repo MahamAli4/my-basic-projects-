@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Examples 2 -->
+    <!-- document.getElemenByTagName  -->
+    <p>Maham</p> <!--0 index -->
+    <p>welcom</p> <!--1 index -->
+    <p>ali</p> <!--2  index -->
+    <script>
+        let pAllTags = document.getElementsByTagName("p")
+        //jab ham Tag name ya class name k zariye target karan ge to wo html ka collection bana deta hai.
+        //  jis p ko bhi target karna ho aus ka index number likh dai ge . 
+        console.log(pAllTAgs);
+        console.log(pAllTAgs[2]); // answer is : ali
+
+    </script>
+
+</body>
+</html>

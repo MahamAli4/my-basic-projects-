@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <!-- fist method  -->
+    <button onclick="showData()">Save</button>
+    <script>
+        function showdata(){
+            alert('hello')
+        }
+    </script>
+
+    <!-- 2nd method  -->
+
+    <button>SAVE</button>
+    <Script>
+        let btn = document.querySelector('button');
+         // addEventlistener k breakit me 2 perameterpass karan ge fist me bataye ge k kia Event karana he 
+         // 2nd me funtion ya arrow function banaye geor ye call back kehlata 
+         // or he or ye function jo addEventListener k ander likha ja raha he aus ko call back function 
+         // kehte hain. or callBack function wo kehlate hain jo rounf=d breakit me likhe jate hai.. 
+        btn.addEventListener(click, function(){
+            alert('hello')
+        })
+        //ase function likh bhi likh sakte hai ....
+        btn.addEventListener(click,()=>{
+            alert('hello')
+        })
+
+        // arrow functions se bhi ... 
+    </Script>
+    <script src="app.js"></script>
+</body>
+
+</html>

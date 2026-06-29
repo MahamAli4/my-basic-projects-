@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .loginModal{
+            width: 35%;
+            height: 100vh;
+            position: fixed;
+            right:-560px;
+            top: 0;
+            padding: 30px;
+            transition: 0.5s;
+            background-color: crimson;
+            color: #fff;
+        }
+        .headingModal{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .headingModal h3{
+            color: #fff;
+            font-size: 30px;
+            font-weight: 400;
+        }
+        .loginModal form{
+            margin-top: 40px;
+        }
+        .loginModal input{
+            margin-top: 10px;
+            width: 100%;
+            height: 30px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .loginModal button{
+            width: 100%;
+            padding: 10px 0;
+            color: #fff;
+            background-color: rgb(98, 3, 22);
+            border: none;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .myloginBtn{
+            width: 150px;
+            height: 40px;
+            margin: 40px;
+            padding: 10px;
+            background-color: crimson;
+            color: #fff;
+            border: none;
+        }
+        .showModal{
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <button id="login" class="myloginBtn">Login</button>
+     
+    
+    <div class="loginModal">
+         <span>&times</span>
+        <div class="headingModal">
+            <h3>Login</h3>
+            <p>Use Email, Instead</p>
+        </div>
+
+        <form action="">
+            <label for="">Mobile Number</label>
+            <input type="text">
+            <button>Login</button>
+            <p>Don't have an account</p>
+        </form>
+     </div>
+
+     <script>
+        let loginBtn = document.querySelector('#login');
+        let loginModalElement = document.querySelector('.loginModal');
+        let closeBtn= document.querySelector('span');
+
+        loginBtn.addEventListener("click",()=>{
+            loginModalElement.classList.add('showModal')
+        })
+        
+        closeBtn.addEventListener("click",()=>{
+            loginModalElement.classList.remove('showModal')
+        } )
+        
+
+     </script>
+
+</body>
+</html>

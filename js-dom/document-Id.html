@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- Examples 1 -->
+    <!-- Elements ko target karne ka tarika  -->
+    <!-- document.getElemenById  -->
+    <h1 id="heading">Maham welcom <u> Ali</u></h1>
+    <div id="response"></div>
+    <!-- agar h1 bich ka sub text o elemnet div me store karna ho to  -->
+    <script>
+        let headingElement = document.getElementById("heading");
+        //ab is ne to h1 k pure element ko target kia huwa he. agar koi pear element
+        //  he jis k bich k bich k part ko lena ho . to phir innerHTMl kouse karan ge 
+
+        console.log(headingElement.innerHTML);// ye ander Elemnt k sath text ko dega jese   .....Maham Welcome <u> Ali </u>
+        console.log(headingElement.innerText); //ye ander k text ko nikal k de ga ander koi bhi element ho ga aus ko chor dega..
+
+        let responseElement = document.getElementById("response")
+        responseElement.innerHTML = headingElement.innerHTML
+
+        // ?   v   is se ye huwa k jo bhi headingElement ka data ho ga wo responseElement
+        // k ander chala jaye ga 
+
+    </script>
+
+</body>
+</html>

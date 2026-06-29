@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .activePara{
+          font-size: 30px;
+          background-color: black;
+          color: #fff;
+          font-style: italic;
+          padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="css">CSS</button>
+    <button id="addClass" Add Class</button>
+    <button id="removeClass"> Remove class</button>
+    <button id="toggleClass">Toggale Class</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nam dignissimos harum perspiciatis impedit vitae
+        aperiam optio ratione placeat adipisci ut, sit eveniet 
+        officiis voluptate ex quod cupiditate esse. Ut.</p>
+
+
+        <!-- in button k zariye mujhe is paragraph me additing karni he to ham aus 
+        dom ka use karte uwe kese karan ge ... -->
+
+        <script>
+            let btn1=document.querySelector('#css');
+            let paraElement=document.querySelector('p')
+
+
+            btn1.addEventListener("click", ()=>{
+              paraElement.style.color="red"
+              paraElement.style.backgroundColor="black"
+              //.style  inline css apply karne k lie work karta he 
+            })
+
+            let btn2 = document.querySelector('#addClass');
+
+            btn2.addEventListener("click",()=>{
+                paraElement.classList.add('activePara')
+               // is me phele se class bani hu honi chahiye matlab class bani hu v ho 
+               // but kisi bhi Element/Tags lagi na ho javascript k throw add karna
+               // class  ko  is me .add() la use karte hain . .classList javascript ka aik method he.
+            })
+            
+
+            let btn3 = document.querySelector('#removeClass');
+
+            btn3.addEventListener("click",()=>{
+                paraElement.classList.remove('activePara')
+                // ye jo class aad( ) se lagai he to remove() lagane se remove ho jaye gi.
+            })  
+            
+            
+            let btn4 = document.querySelector('#toggleClass');
+
+            btn4.addEventListener("click",()=>{
+                paraElement.classList.toggle('activePara')
+                //toggle remove o add 2no ka kam karta hai .jab button par 
+                // click karan ge class apply ho jaye gi or jab ausi button par 
+                // click karan ge to remove ho jaye gi... 
+
+            })    
+        </script>
+</body>
+
+</html>

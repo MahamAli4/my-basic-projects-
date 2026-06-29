@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Dom Append methods:</h1>
+<div id="test"></div>
+    <script>
+        // Dom Append Methods: 
+
+        // 1:-  appendChid
+        // 2:-  insertBefore      ye is lie use hota hai k kis Element ko kis se phele insert karna he 
+        // 3:-  insertAdjacentElement
+        // 4:-  insertAdjacentHtml  
+        // 5:-  insertAdjacentText 
+
+        let newElement = document.createElement("h2");
+        console.log(newElement);
+        
+        let nextText= document.createTextNode("hey! My name is Maham.");
+        console.log(nextText);
+
+        //createElement( ) function ka use kar k aik java script me element yani tag ban lia 
+        // createtext bhi bana lia .. ab me chahati hun k jo javascript k function se text likha he wo javascript k banye huwe elent k ander 
+        // to aus k li appendChid() function ka use karan ge.
+
+        newElement.appendChild(nextText);
+        console.log(newElement);
+
+        document.getElementById('test').appendChild(newElement);
+        
+        let target = getElementById('test');
+         
+        target.insertBefore(newElement,target.chidNodes[0] )  ; // is me 2 perametters use karte hain first me likhte hai konsa Element ko shift karna he  
+        // 2nd me likhte hain k kaha rakhana he.
+        
+    </script>
+</body>
+</html>

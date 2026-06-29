@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            border: 1 px solid red;
+            text-align: center;
+            padding: 20px;
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1> welcome to Maham</h1>
+        <button>save</button>
+        <p>Lorem ipsum dolor <b>sit amet consectetur adipisicing elit.</b>  Eligendi, minus!
+            <u>Lorem ipsum dolor sit amet.</u> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quaerat, animi nihil cumque inventore, iusto esse sequi suscipit quo earum tempore iure fugit eius beatae id soluta. Nesciunt, temporibus iure.
+        </p>
+    </div>
+
+
+    <script>
+        let btn=document.querySelector('button');
+
+        btn.addEventListener("click",()=>{
+            btn.parentElement.style.background="black"
+            btn.parentElement.style.color="#fff"
+
+            // child k throw parent me changing ho rahi he ... 
+            btn.previousElementSibling.style.color="red"
+            // ye child se phele koi Element ho to aus ko target karta hai 
+            // ye jese is me button se phele hading tag he to is ne previousElementSibling se target kia ..
+            
+            btn.nextElementSibling.style.color="yellow"
+            // ye chleren Element k bad wale Element ko target karta hai
+            //  jese is me is e p tag ko target kia hai.
+            
+           btn.nextElementSibling.children
+        //    ye child k bhi ander sibling ko dhondeag.. 
+           btn.nextElementSibling.lastChild
+        //    children k ander jo last sibling ho ga ause de ga .... 
+            
+        })
+    </script>
+</body>
+</html>
