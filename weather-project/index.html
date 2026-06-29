@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="./videos/main.mp4" type="video/mp4">
+    </video>
+ 
+    <div class="app-main">
+        <div class="searchInput">
+            <input type="text" id="inputBox" placeholder="Enter City Name........!" autocomplete="off">
+        </div>
+        <div class="weatherBody">
+            <div class="locationDetail">
+                <div class="city" id="city">Karachi, PK</div>
+                <div class="date" id="date">12 July (Monday) 2025</div>
+            </div>
+            <div class="weatherStatus">
+                <div class="temp" id="temp">40&deg;C</div>
+                <div class="min-max" id="min-max">32&deg;C (min) / 34&deg;C (max)</div>
+                <div class="weather" id="weather">Cloud</div>
+                <div class="image" id="weatherImage">
+                    <img id="weatherIcon" src="" alt="Weather Icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
